@@ -34,7 +34,11 @@ const userSchema = g.object({
     password: g.string().min(8).max(128).regex(/^[a-zA-Z]*$/),
 });
 
-console.log(userSchema.parse({
+const user = userSchema.parse({
     name: "test",
     password: "abcdABCD1"
-}))
+});
+
+if (user.ok) {
+    console.log(user.data)
+}
