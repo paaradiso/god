@@ -36,5 +36,5 @@ const userSchema = g.object({
 
 console.log(userSchema.parse({
     name: "test",
-    password: "abcdABCD"
+    password: "abcdABCD1"
 }))

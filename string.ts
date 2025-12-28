@@ -59,7 +59,7 @@ export class StringSchema implements Schema<string> {
     }
 
     regex(pattern: RegExp) {
-        return new StringSchema(this.options.concat({ option: "regex", check: (input) => pattern.test(input), message: `Input does not match regex pattern.` }));
+        return new StringSchema(this.options.concat({ option: "regex", check: (input) => pattern.test(input), message: `Input does not match regex pattern ${pattern}.` }));
     }
 
 }
